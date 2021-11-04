@@ -74,7 +74,7 @@
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 2;
+  z-index: 1001;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -3417,7 +3417,7 @@ img {
 .caption {
   margin-top: 14px;
   color: #485162;
-  font-size: 15px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -3596,6 +3596,7 @@ img {
 .course-section {
   overflow: hidden;
   padding: 96px 3% 162px;
+  height:100vh;
   background-color: #f5eee5;
 }
 
@@ -4110,7 +4111,10 @@ img {
 }
 
 .title-wrapper {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 64px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -4985,7 +4989,6 @@ img {
 }
 
 .social-icon-grid {
-  margin-top: 20px;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
@@ -5802,7 +5805,6 @@ img {
 }
 
 .h3-large-title {
-  margin-bottom: 20px;
   font-size: 40px;
   line-height: 48px;
 }
@@ -6023,14 +6025,13 @@ img {
   right: 0%;
   bottom: auto;
   z-index: -10;
-  height: 100%;
-  max-height: 100vh;
+  height: 100vh;
+  max-height: 650px;
   background-color: #f3f6fb;
   background-image: url('../images/Course-Header-Large.png');
   background-position: 0% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 32px;
 }
 
 .teacher-large {
@@ -6423,9 +6424,178 @@ img {
   border-color: #fff;
 }
 
-.image {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.testimonials__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 80em;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.testimonials {
+  display: block;
+  padding: 174px 4vw 103px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.testimonials__card-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.testimonials__card {
+  margin: 1.5em;
+  padding: 38px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 30em;
+  -ms-flex: 0 30em;
+  flex: 0 30em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dddfe5;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.testimonials__card-photo {
+  width: 60px;
+  margin-bottom: 15px;
+  border-radius: 100%;
+}
+
+.testimonials__card-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.testimonials__card-role {
+  color: rgba(43, 42, 53, 0.5);
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.testimonials__card-blockquote {
+  margin-bottom: 34px;
+  color: #545465;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+}
+
+.testimonials__heading {
+  max-width: 80em;
+  margin-right: auto;
+  margin-bottom: 84px;
+  margin-left: auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .testimonials__wrapper {
+    max-width: 100em;
+  }
+
+  .testimonials {
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+
+  .testimonials__card {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0%;
+    -ms-flex-preferred-size: 0%;
+    flex-basis: 0%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .testimonials__card {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0%;
+    -ms-flex-preferred-size: 0%;
+    flex-basis: 0%;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -6497,14 +6667,13 @@ img {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .header-title-block {
-    display: block;
     margin-bottom: 32px;
   }
 
@@ -6681,6 +6850,26 @@ img {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .testimonials__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .testimonials {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .testimonials__card {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
   }
 }
 
@@ -6867,6 +7056,15 @@ img {
 
   .h1-smaller {
     margin-bottom: 16px;
+  }
+
+  .testimonials__card {
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+
+  .testimonials__heading {
+    font-size: 2.6em;
   }
 }
 
@@ -7220,7 +7418,7 @@ img {
   }
 }
 
-#w-node-_47af5214-4e83-3958-d603-f0cd23fa5ca1-dc29397d {
+#w-node-_47af5214-4e83-3958-d603-f0cd23fa5ca1-ac21d938 {
   -ms-grid-row: span 2;
   grid-row-start: span 2;
   -ms-grid-row-span: 2;
@@ -7231,7 +7429,7 @@ img {
   grid-column-end: span 1;
 }
 
-#w-node-_68925d39-eb59-1a1e-55cd-460c5b7dc8a3-dc29397d {
+#w-node-_68925d39-eb59-1a1e-55cd-460c5b7dc8a3-ac21d938 {
   -ms-grid-row: span 2;
   grid-row-start: span 2;
   -ms-grid-row-span: 2;
@@ -7242,48 +7440,48 @@ img {
   grid-column-end: span 1;
 }
 
-#w-node-_098de674-7784-32ab-f1a6-5cdaeb513e4e-7b29397e {
+#w-node-_098de674-7784-32ab-f1a6-5cdaeb513e4e-9e21d939 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
 }
 
-#w-node-_6f2b49d1-691e-303c-85b5-8a9d3cf2750b-98293981 {
+#w-node-_6f2b49d1-691e-303c-85b5-8a9d3cf2750b-f721d93c {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
 }
 
-#w-node-_3fd97bba-cf41-283a-987a-00551f6703cc-a0293986 {
+#w-node-_3fd97bba-cf41-283a-987a-00551f6703cc-7921d941 {
   -ms-grid-column-align: center;
   justify-self: center;
 }
 
 @media screen and (max-width: 991px) {
-  #w-node-_90d421df-0aae-c77a-1339-32d95da799bb-5529397a {
+  #w-node-_90d421df-0aae-c77a-1339-32d95da799bb-6521d930 {
     -webkit-box-ordinal-group: -9998;
     -webkit-order: -9999;
     -ms-flex-order: -9999;
     order: -9999;
   }
 
-  #w-node-_6f2b49d1-691e-303c-85b5-8a9d3cf2750b-98293981 {
+  #w-node-_6f2b49d1-691e-303c-85b5-8a9d3cf2750b-f721d93c {
     -webkit-box-ordinal-group: -9998;
     -webkit-order: -9999;
     -ms-flex-order: -9999;
     order: -9999;
   }
 
-  #w-node-_9b69d480-0b1f-eb0c-54b1-875b74ad2057-a0293986 {
+  #w-node-_9b69d480-0b1f-eb0c-54b1-875b74ad2057-7921d941 {
     -webkit-box-ordinal-group: -9998;
     -webkit-order: -9999;
     -ms-flex-order: -9999;
     order: -9999;
   }
 
-  #w-node-_3fd97bba-cf41-283a-987a-00551f6703cc-a0293986 {
+  #w-node-_3fd97bba-cf41-283a-987a-00551f6703cc-7921d941 {
     -webkit-box-ordinal-group: -9998;
     -webkit-order: -9999;
     -ms-flex-order: -9999;
@@ -7292,14 +7490,14 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  #w-node-_90d421df-0aae-c77a-1339-32d95da799bb-5529397a {
+  #w-node-_90d421df-0aae-c77a-1339-32d95da799bb-6521d930 {
     -webkit-box-ordinal-group: -9998;
     -webkit-order: -9999;
     -ms-flex-order: -9999;
     order: -9999;
   }
 
-  #w-node-_47af5214-4e83-3958-d603-f0cd23fa5ca1-dc29397d {
+  #w-node-_47af5214-4e83-3958-d603-f0cd23fa5ca1-ac21d938 {
     -ms-grid-row: span 1;
     grid-row-start: span 1;
     -ms-grid-row-span: 1;
@@ -7312,7 +7510,7 @@ img {
 }
 
 @media screen and (max-width: 479px) {
-  #w-node-c500cf4f-1b57-e8b4-9a6e-fc10d3ed0757-dc29397d {
+  #w-node-c500cf4f-1b57-e8b4-9a6e-fc10d3ed0757-ac21d938 {
     -ms-grid-row: span 1;
     grid-row-start: span 1;
     -ms-grid-row-span: 1;
@@ -7323,7 +7521,7 @@ img {
     grid-column-end: span 2;
   }
 
-  #w-node-_68925d39-eb59-1a1e-55cd-460c5b7dc8a3-dc29397d {
+  #w-node-_68925d39-eb59-1a1e-55cd-460c5b7dc8a3-ac21d938 {
     -ms-grid-row: span 1;
     grid-row-start: span 1;
     -ms-grid-row-span: 1;
@@ -7334,7 +7532,7 @@ img {
     grid-column-end: span 2;
   }
 
-  #w-node-_827d0dc7-cc87-a4e3-3cf9-f81ea2d5bde0-dc29397d {
+  #w-node-_827d0dc7-cc87-a4e3-3cf9-f81ea2d5bde0-ac21d938 {
     -ms-grid-row: span 1;
     grid-row-start: span 1;
     -ms-grid-row-span: 1;
